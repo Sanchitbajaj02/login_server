@@ -12,7 +12,9 @@ app.use(morgan("dev"));
 // Calling Database
 require("./config/db");
 
-app.use("/", require("./api/User"));
+// Calling routes
+const userRouter = require("./api/User");
+app.use("/user", userRouter);
 
 app.get("/", (req, res) => {
   res.status = 200;
