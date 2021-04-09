@@ -16,11 +16,7 @@ require("./config/db");
 const userRouter = require("./api/User");
 app.use("/user", userRouter);
 
-app.get("/", (req, res) => {
-  res.status = 200;
-  res.setHeader("Content-Type", "text/html");
-  res.end("<h1>hello world</h1>");
-});
+app.use(express.static('public'));
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
