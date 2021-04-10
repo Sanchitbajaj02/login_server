@@ -24,3 +24,7 @@ npm install
 ```
 npm run dev
 ```
+
+>Test the project on Repl
+
+[![run on repl.it](https://repl.it/badge/github/sanchitbajaj02/login_server)](https://repl.it/github/sanchitbajaj02/login_server)
