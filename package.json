@@ -2,11 +2,11 @@
   "name": "login_server",
   "version": "1.0.0",
   "description": "Login and signup server",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "Sanchit",
   "license": "ISC",
