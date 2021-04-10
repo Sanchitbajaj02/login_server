@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // Middlewares
 app.use(bodyParser.json());
