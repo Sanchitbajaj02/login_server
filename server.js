@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 
-const port = process.env.PORT || 3000;
+let port = process.env.PORT || 3000;
 
 // Middlewares
 app.use(bodyParser.json());
@@ -13,8 +13,11 @@ app.use(morgan("dev"));
 require("./config/db");
 
 // Calling routes
-const userRouter = require("./api/User");
-app.use("/user", userRouter);
+const loginRouter = require("./api/Login");
+app.use("/user", loginRouter);
+
+const signupRouter = require("./api/Signup");
+app.use("/user", signupRouter);
 
 app.use(express.static('public'));
 
