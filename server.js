@@ -2,12 +2,14 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
+const cors = require('cors');
 
 let port = process.env.PORT || 3000;
 
 // Middlewares
 app.use(bodyParser.json());
 app.use(morgan("dev"));
+app.use(cors());
 
 // Calling Database
 require("./config/db");
